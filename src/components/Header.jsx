@@ -1,14 +1,12 @@
-import { Component } from 'react';
+import React from "react";
 
-class Header extends Component {
-  render() {
-    return (
-      <header className="header">
-        <h1>Веном</h1>
-        <p>Фантастичний бойовик про симбіота Венома</p>
-      </header>
-    );
-  }
+function Header({ movie }) {
+  return (
+    <header className="header">
+      <h1>{movie.title}</h1>
+      <img className="movie-poster" src={movie.image} alt={movie.title} />
+    </header>
+  );
 }
 
 export default Header;
