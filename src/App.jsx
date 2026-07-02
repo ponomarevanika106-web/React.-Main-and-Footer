@@ -5,11 +5,18 @@ import Footer from './components/Footer';
 import './App.css';
 
 class App extends Component {
+  actors = [
+    "Том Гарді",
+    "Мішель Вільямс",
+    "Різ Ахмед",
+    "Скотт Гейз",
+  ];
+
   render() {
     return (
       <>
         <Header />
-        <Main />
+        <Main actors = {this.actors} />
         <Footer />
       </>
     );

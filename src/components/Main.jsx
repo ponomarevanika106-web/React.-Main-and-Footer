@@ -3,12 +3,13 @@ import venomImg from "../assets/venom.png";
 
 class Main extends Component {
   actors = [
-    "Том Гарді",
-    "Мішель Вільямс",
-    "Різ Ахмед",
-    "Скотт Гейз",
-  ];
+  { id: 'act-1', name: "Том Гарді" },
+  { id: 'act-2', name: "Мішель Вільямс" },
+  { id: 'act-3', name: "Різ Ахмед" },
+  { id: 'act-4', name: "Скотт Гейз" },
+];
 
+actors = this.props.actors
   render() {
     return (
       <main className="main">
@@ -23,12 +24,12 @@ class Main extends Component {
           які загрожують людству.
         </p>
 
-        <h3>Актори</h3>
-        <ul className="actors-list">
-          {this.actors.map((actor, index) => (
-            <li key={index}>{actor}</li>
-          ))}
-        </ul>
+       <ul className="actors-list">
+      {this.actors.map((actor) => (
+        <li key={actor.id}>{actor.name}</li>
+      ))}
+    </ul>
+  );
 
         <h3>Загальна інформація</h3>
         <div className="info-block">
