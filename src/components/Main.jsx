@@ -11,9 +11,9 @@ class Main extends Component {
 
         <h3>Актори</h3>
         <ul className="actors-list">
-          {movie.actors.map((actor, index) => (
-            <li key={index}>{actor}</li>
-          ))}
+        {movie.actors.map((actor) => (
+         <li key={actor}>{actor}</li>
+         ))}
         </ul>
 
         <h3>Загальна інформація</h3>
